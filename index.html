@@ -1,220 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vortex Primus — Seu aluno está tendo resultado. E mesmo assim vai cancelar.</title>
-<meta name="description" content="O Vortex Primus torna o resultado do seu aluno visível — para que ele nunca mais pense em cancelar. Teste 7 dias grátis, sem cartão.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Primus — Seu aluno vê a própria evolução</title>
+  <meta name="description" content="O app que transforma a evolução do seu aluno em algo que ele consegue ver. Avatar corporal inteligente, gráficos automáticos e o Sistema Primus. Teste grátis por 7 dias.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="logo">
-    <div class="logo-dot"></div>
-    VORTEX <span>PRIMUS</span>
-  </div>
-  <a href="https://vortex-primus.vercel.app/" class="nav-cta">Testar grátis</a>
-</nav>
-
-<!-- ============ HERO — DOR ============ -->
-<section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-    <source src="assets/hero.webm" type="video/webm">
-    <source src="assets/hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <div class="eyebrow">Realidade do mercado fitness</div>
-    <h1>
-      Seu aluno está tendo resultado.<br>
-      E mesmo assim vai <span class="accent">cancelar</span>.
-    </h1>
-    <p class="subhead">
-      Porque ele <strong>não consegue enxergar</strong> a própria evolução —
-      e o que não se vê, não se valoriza.
-    </p>
-  </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    role para entender
-  </div>
-</section>
-
-<!-- ============ AGITAÇÃO ============ -->
-<section class="agitation">
-  <div class="container">
-
-    <div class="agitation-row reveal">
-      <div class="agitation-media">
-        <img src="assets/agitation-1.jpg" alt="Personal trainer concentrado em planilha enquanto aluna treina sozinha ao fundo">
-      </div>
-      <div class="agitation-text">
-        <div class="line1">Você trabalha.</div>
-        <div class="line2">Ele não <span class="mark">vê</span>.</div>
-      </div>
-    </div>
-
-    <div class="agitation-row reveal">
-      <div class="agitation-media">
-        <img src="assets/agitation-2.jpg" alt="Aluna olhando o celular com expressão de preocupação">
-      </div>
-      <div class="agitation-text">
-        <div class="line1">Você entrega resultado.</div>
-        <div class="line2">Ele acha <span class="mark">caro</span>.</div>
-      </div>
-    </div>
-
-    <div class="agitation-row reveal">
-      <div class="agitation-media">
-        <img src="assets/agitation-3.jpg" alt="Banco de academia vazio com toalha esquecida">
-      </div>
-      <div class="agitation-text">
-        <div class="line1">Você perde o aluno.</div>
-        <div class="line2">Sem nunca saber <span class="mark">por quê</span>.</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ VIRADA — PRODUTO ============ -->
-<section class="virada">
-  <div class="container">
-    <div class="virada-header reveal">
-      <div class="eyebrow">A virada</div>
-      <h2>O Vortex Primus torna o <span class="glow">resultado visível</span>.</h2>
-      <p class="virada-sub">
-        Em segundos, seu aluno vê exatamente o que você já sabe: que o treino está funcionando.
-        Avatar 3D, gráfico de evolução e composição corporal — tudo em uma tela.
-      </p>
-    </div>
-
-    <div class="virada-showcase">
-      <div class="phone-frame reveal">
-        <img src="assets/avatar.jpg" alt="Tela do Vortex Primus mostrando avatar corporal e gráfico de evolução de gordura e músculo">
-      </div>
-
-      <div class="signal-chart reveal">
-        <div class="signal-chart-header">
-          <span class="signal-chart-title">Evolução · 6 avaliações</span>
-          <div class="signal-legend">
-            <div class="signal-legend-item"><span class="legend-dot red"></span>Gordura</div>
-            <div class="signal-legend-item"><span class="legend-dot green"></span>Músculo</div>
-          </div>
-        </div>
-
-        <svg class="cross-chart" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="50" x2="400" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-          <line x1="0" y1="150" x2="400" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-
-          <path class="line-red" d="M 20 50 C 120 65, 180 90, 240 120 C 300 145, 340 158, 380 165"/>
-          <path class="line-green" d="M 20 165 C 120 145, 180 115, 240 85 C 300 58, 340 45, 380 38"/>
-
-          <circle class="endpoint" cx="380" cy="165" r="6" fill="var(--red)"/>
-          <circle class="endpoint" cx="380" cy="38" r="6" fill="var(--green)"/>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#00D1DF"/>
+              <stop offset="1" stop-color="#BF3DFB"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 3 C24 3 29 9 29 16 C29 22 24 27 18 27 C13 27 9 23 9 18 C9 14 12 11 16 11 C19 11 21 13 21 16"
+                fill="none" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
         </svg>
+        <span class="logo-text">VORTEX <strong>PRIMUS</strong></span>
+      </a>
+      <a href="#cta" class="btn btn-ghost">Testar Grátis</a>
+    </div>
+  </nav>
 
-        <div class="signal-readout">
-          <div class="readout-item">
-            <span class="readout-arrow down">↘</span>
-            <span class="readout-label">Gordura</span>
+  <main>
+
+    <!-- 1. HERO — DOR -->
+    <section class="hero" id="hero">
+      <div class="hero-media scan-frame">
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+          <source src="assets/hero.webm" type="video/webm">
+          <source src="assets/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient" aria-hidden="true"></div>
+        <span class="signal-tag signal-tag-float">SINAL · DOR</span>
+        <div class="corner corner-tl" aria-hidden="true"></div>
+        <div class="corner corner-tr" aria-hidden="true"></div>
+        <div class="corner corner-bl" aria-hidden="true"></div>
+        <div class="corner corner-br" aria-hidden="true"></div>
+        <div class="hero-headline">
+          <h1>
+            <span class="line">Seu aluno está evoluindo...</span>
+            <span class="line line-accent">...e mesmo assim cancelou?</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="container hero-body">
+        <div class="hero-diagnosis">
+          <p class="diag-item"><span class="diag-check" aria-hidden="true">✓</span> Você montou o treino.</p>
+          <p class="diag-item"><span class="diag-check" aria-hidden="true">✓</span> Você acompanhou.</p>
+          <p class="diag-item"><span class="diag-check" aria-hidden="true">✓</span> Você ajustou a estratégia.</p>
+          <p class="diag-item"><span class="diag-check" aria-hidden="true">✓</span> Você entregou resultado.</p>
+        </div>
+        <p class="diag-twist">
+          Mas seu aluno não conseguiu <em>enxergar</em> a própria evolução.<br>
+          E foi embora.
+        </p>
+        <p class="lead">
+          O problema não é falta de resultado.<br>
+          <strong>O problema é falta de percepção de resultado.</strong>
+        </p>
+        <p class="brand-line">
+          O <span class="grad-text">VORTEX PRIMUS</span> transforma evolução em algo que o aluno consegue <strong>VER</strong>.
+        </p>
+        <a href="#cta" class="btn btn-primary">Testar Grátis por 7 Dias</a>
+        <p class="microcopy">Sem compromisso. Sem risco.</p>
+      </div>
+    </section>
+
+    <!-- 2. AGITAÇÃO — CONTRASTE -->
+    <section class="section section-agitation" id="agitacao">
+      <div class="container">
+        <span class="signal-tag">SINAL · CONTRASTE</span>
+        <h2 class="section-title">
+          A maioria dos alunos não desiste por falta de resultados.<br>
+          <span class="grad-text">Desiste porque não consegue enxergá-los.</span>
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="video-frame scan-frame">
+          <video autoplay muted loop playsinline poster="assets/agitation-poster.jpg">
+            <source src="assets/agitation.webm" type="video/webm">
+            <source src="assets/agitation.mp4" type="video/mp4">
+          </video>
+          <div class="corner corner-tl" aria-hidden="true"></div>
+          <div class="corner corner-tr" aria-hidden="true"></div>
+          <div class="corner corner-bl" aria-hidden="true"></div>
+          <div class="corner corner-br" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="agitation-body">
+          <p>Imagine dois alunos. Os dois perderam 5kg. Os dois reduziram gordura corporal. Os dois melhoraram a composição corporal.</p>
+          <p class="standout">Mas apenas um consegue <em>visualizar</em> claramente essa transformação.</p>
+          <p class="question">Qual deles vai continuar motivado por mais tempo?</p>
+          <p class="bridge">O Vortex foi criado exatamente pra responder essa pergunta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TRADUÇÃO — PARE DE ENTREGAR NÚMEROS -->
+    <section class="section section-translate" id="traducao">
+      <div class="container">
+        <span class="signal-tag">SINAL · TRADUÇÃO</span>
+        <h2 class="section-title">
+          Pare de entregar números.<br>
+          <span class="grad-text">Comece a entregar evolução.</span>
+        </h2>
+        <p class="section-intro">O aluno comum não entende protocolos, percentuais, fórmulas ou dobras cutâneas.</p>
+
+        <div class="translate-grid">
+          <div class="translate-col col-no">
+            <span class="col-label">O que ele não entende</span>
+            <ul>
+              <li>Protocolos</li>
+              <li>Percentuais</li>
+              <li>Fórmulas</li>
+              <li>Dobras cutâneas</li>
+            </ul>
           </div>
-          <div class="readout-item">
-            <span class="readout-arrow up">↗</span>
-            <span class="readout-label">Massa muscular</span>
+          <div class="translate-arrow" aria-hidden="true">
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+              <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="translate-col col-yes">
+            <span class="col-label">O que ele entende na hora</span>
+            <ul>
+              <li><span class="trend trend-down" aria-hidden="true"><svg viewBox="0 0 28 16"><path d="M1 2 L10 6 L19 9 L27 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Gordura diminuindo</li>
+              <li><span class="trend trend-up" aria-hidden="true"><svg viewBox="0 0 28 16"><path d="M1 14 L10 10 L19 7 L27 2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Massa muscular aumentando</li>
+              <li><span class="trend trend-body" aria-hidden="true">●</span> Corpo transformando</li>
+            </ul>
           </div>
         </div>
 
-        <p class="signal-caption">Se ele não <span class="hl">vê</span> isso,<br>ele não valoriza o seu trabalho.</p>
+        <div class="fan-screens" aria-hidden="true">
+          <div class="fan-card fan-1"><img src="assets/avatar-screen.jpg" alt="" loading="lazy"></div>
+          <div class="fan-card fan-2"><img src="assets/composicao.jpg" alt="" loading="lazy"></div>
+          <div class="fan-card fan-3"><img src="assets/medidas.jpg" alt="" loading="lazy"></div>
+        </div>
+
+        <p class="translate-closing">
+          É isso que gera motivação.<br>
+          É isso que aumenta retenção.<br>
+          É isso que faz o aluno continuar.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ PROVA ============ -->
-<section class="prova">
-  <div class="container">
-    <div class="prova-header reveal">
-      <div class="eyebrow">Por dentro do app</div>
-      <h2>Cada detalhe, documentado.</h2>
-    </div>
+    <!-- 4. VIRADA — AVATAR CORPORAL INTELIGENTE -->
+    <section class="section section-virada" id="virada">
+      <div class="container">
+        <span class="signal-tag">SINAL · VIRADA</span>
+        <h2 class="section-title">
+          O aluno abre o app.<br>
+          <span class="grad-text">E vê a própria transformação.</span>
+        </h2>
+      </div>
 
-    <div class="prova-grid">
-      <div class="prova-card reveal">
-        <img src="assets/composicao.jpg" alt="Tela de composição corporal do Vortex Primus mostrando percentual de gordura, massa muscular, idade metabólica e gordura visceral">
-        <div class="prova-card-footer">
-          <span class="tag">Composição corporal</span>
-          <p><strong>% gordura, massa muscular, idade metabólica e gordura visceral</strong> — calculados automaticamente a cada avaliação.</p>
+      <div class="container virada-grid">
+        <div class="virada-media">
+          <div class="hud-frame scan-frame">
+            <video autoplay muted loop playsinline poster="assets/avatar-evolution-poster.jpg">
+              <source src="assets/avatar-evolution.webm" type="video/webm">
+              <source src="assets/avatar-evolution.mp4" type="video/mp4">
+            </video>
+            <div class="corner corner-tl" aria-hidden="true"></div>
+            <div class="corner corner-tr" aria-hidden="true"></div>
+            <div class="corner corner-bl" aria-hidden="true"></div>
+            <div class="corner corner-br" aria-hidden="true"></div>
+          </div>
+          <div class="proof-badge">
+            <img src="assets/avatar-screen.jpg" alt="Tela real do Vortex Primus: avatar corporal e gráfico de evolução de % gordura caindo e % músculo subindo" loading="lazy">
+            <span class="proof-label">Direto do app</span>
+          </div>
+        </div>
+        <div class="virada-text">
+          <h3>Avatar Corporal Inteligente</h3>
+          <p>O avatar evolui automaticamente com base nos resultados reais das avaliações.</p>
+          <p>Seu aluno deixa de depender só da balança. Agora ele consegue <em>visualizar</em> a própria jornada.</p>
+          <p class="pull-quote">Porque aquilo que pode ser visto também pode ser valorizado.</p>
         </div>
       </div>
+    </section>
 
-      <div class="prova-card reveal">
-        <img src="assets/medidas.jpg" alt="Tela de evolução de medidas do Vortex Primus mostrando gráficos de coxa e panturrilha">
-        <div class="prova-card-footer">
-          <span class="tag">Evolução de medidas</span>
-          <p>Coxa, panturrilha e outras medidas em <strong>gráficos comparativos</strong> — o progresso fica impossível de ignorar.</p>
+    <!-- 5. ENTREGA — TRANSFORME AVALIAÇÕES EM EXPERIÊNCIAS -->
+    <section class="section section-entrega" id="entrega">
+      <div class="container entrega-grid">
+        <div class="entrega-text">
+          <span class="signal-tag">SINAL · ENTREGA</span>
+          <h2 class="section-title">Cada avaliação se transforma numa <span class="grad-text">experiência completa</span>.</h2>
+          <ul class="check-list">
+            <li>Avatar Corporal</li>
+            <li>Gordura Corporal</li>
+            <li>Massa Muscular</li>
+            <li>Gordura Visceral</li>
+            <li>Idade Metabólica</li>
+            <li>Circunferências</li>
+            <li>Histórico Evolutivo</li>
+            <li>Comparações automáticas</li>
+          </ul>
+          <p class="closing">Tudo organizado de forma intuitiva.</p>
+        </div>
+        <div class="entrega-media">
+          <div class="glow-blob" aria-hidden="true"></div>
+          <div class="phone-mock scan-frame">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <img src="assets/composicao.jpg" alt="Tela do Vortex Primus mostrando composição corporal completa: gordura, massa muscular, idade metabólica e gordura visceral" loading="lazy">
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="prova-card reveal">
-        <img src="assets/balanca.jpg" alt="Balança de bioimpedância compatível com o Vortex Primus">
-        <div class="prova-card-footer">
-          <span class="tag">Integração direta</span>
-          <p>Compatível com <strong>balanças de bioimpedância</strong> — os dados entram no app sem digitação manual.</p>
+    <!-- 6. LOOP DE ENGAJAMENTO -->
+    <section class="section section-loop" id="loop">
+      <div class="container">
+        <span class="signal-tag">SINAL · LOOP DE ENGAJAMENTO</span>
+        <h2 class="section-title">O sistema que mantém o aluno conectado ao processo.</h2>
+
+        <div class="loop-grid">
+          <div class="loop-positive">
+            <span class="loop-label loop-label-positive">Quando o aluno percebe progresso</span>
+            <ul>
+              <li>Treina mais</li>
+              <li>Falta menos</li>
+              <li>Segue melhor a dieta</li>
+              <li>Compartilha conquistas</li>
+              <li>Renova mais vezes</li>
+              <li>Indica mais pessoas</li>
+            </ul>
+          </div>
+          <div class="loop-divider" aria-hidden="true">
+            <span class="loop-divider-line"></span>
+          </div>
+          <div class="loop-negative">
+            <span class="loop-label loop-label-negative">Quando não percebe</span>
+            <p class="loop-negative-result">Ele cancela.</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- 7. MÉTODO PRIMUS -->
+    <section class="section section-primus" id="primus">
+      <div class="container">
+        <span class="signal-tag">SINAL · MÉTODO PRIMUS</span>
+        <h2 class="section-title">
+          Criado pra recompensar.<br>
+          <span class="grad-text">Não pra punir.</span>
+        </h2>
+        <p class="section-intro">Seu aluno evolui. Sobe de nível. Recebe reconhecimento. Vê a própria transformação.</p>
+
+        <div class="primus-levels">
+          <span class="primus-track-line" aria-hidden="true"></span>
+          <div class="primus-level">
+            <span class="level-badge">01</span>
+            <span class="level-name">Início</span>
+          </div>
+          <div class="primus-level">
+            <span class="level-badge">02</span>
+            <span class="level-name">Em Evolução</span>
+          </div>
+          <div class="primus-level">
+            <span class="level-badge">03</span>
+            <span class="level-name">Consistente</span>
+          </div>
+          <div class="primus-level level-final">
+            <span class="level-badge">P</span>
+            <span class="level-name">Primus</span>
+          </div>
+        </div>
+
+        <p class="primus-closing">
+          A evolução deixa de ser subjetiva.<br>
+          Ela se torna <span class="hl-cyan">visível</span>. <span class="hl-green">Mensurável</span>. <span class="hl-purple">Motivadora</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. O QUE ESTÁ INCLUSO -->
+    <section class="section section-incluso" id="incluso">
+      <div class="container incluso-grid">
+        <div class="incluso-media">
+          <div class="glow-blob glow-blob-alt" aria-hidden="true"></div>
+          <div class="phone-mock scan-frame">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <img src="assets/medidas.jpg" alt="Tela do Vortex Primus mostrando evolução de medidas em gráficos" loading="lazy">
+          </div>
+        </div>
+        <div class="incluso-text">
+          <span class="signal-tag">SINAL · O QUE VEM JUNTO</span>
+          <h2 class="section-title">Tudo que você precisa pra fazer seu aluno <span class="grad-text">ver a evolução</span>.</h2>
+          <ul class="check-list two-col">
+            <li>Cadastro ilimitado de alunos*</li>
+            <li>Avaliações físicas completas</li>
+            <li>Avatar Corporal Inteligente</li>
+            <li>Evolução gráfica automática</li>
+            <li>Agenda de reavaliações</li>
+            <li>Histórico completo</li>
+            <li>Relatórios profissionais</li>
+            <li>Sistema Primus</li>
+            <li>Atualizações contínuas</li>
+            <li>Plataforma online</li>
+          </ul>
+          <p class="microcopy">*conforme o plano escolhido</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DEPOIMENTOS -->
+    <section class="section section-depoimentos" id="depoimentos">
+      <div class="container">
+        <span class="signal-tag">SINAL · O QUE SEU ALUNO VAI SENTIR</span>
+        <h2 class="section-title">Imagine seus alunos dizendo</h2>
+
+        <div class="quote-grid">
+          <blockquote><span class="quote-mark" aria-hidden="true">"</span>Agora eu consigo ver minha evolução.</blockquote>
+          <blockquote><span class="quote-mark" aria-hidden="true">"</span>Não fazia ideia do quanto eu tinha melhorado.</blockquote>
+          <blockquote><span class="quote-mark" aria-hidden="true">"</span>Isso me motivou a continuar.</blockquote>
+          <blockquote><span class="quote-mark" aria-hidden="true">"</span>Quero chegar no próximo nível.</blockquote>
+        </div>
+
+        <p class="section-closing">Essa é a diferença entre mostrar números e mostrar transformação.</p>
+      </div>
+    </section>
+
+    <!-- 10. CTA FINAL -->
+    <section class="section section-cta" id="cta">
+      <div class="cta-media">
+        <img src="assets/cta-people.jpg" alt="Personal trainer mostrando o app Vortex Primus para aluna sorridente" loading="lazy">
+        <div class="cta-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="container cta-content">
+        <span class="signal-tag">SINAL · COMECE AGORA</span>
+        <h2 class="section-title">
+          Teste o Vortex por 7 dias.<br>
+          <span class="grad-text">De graça.</span>
+        </h2>
+        <ul class="cta-bullets">
+          <li>Descubra como transformar resultados em retenção.</li>
+          <li>Descubra como aumentar o valor percebido do seu trabalho.</li>
+          <li>Descubra como fazer seus alunos enxergarem aquilo que você já entrega todos os dias.</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-large">Quero testar grátis por 7 dias</a>
+        <p class="microcopy">Sem compromisso. Sem risco.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo-text">VORTEX <strong>PRIMUS</strong></span>
+      <p class="footer-tagline">Seu aluno vê a própria evolução. E não cancela.</p>
+      <p class="footer-copy">© 2026 Vortex Primus. Todos os direitos reservados.</p>
     </div>
+  </footer>
 
-    <p class="prova-note">Telas reais do aplicativo Vortex Primus</p>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section class="cta-section">
-  <div class="cta-people-photo reveal">
-    <img src="assets/cta-people.jpg" alt="Personal trainer mostrando evolução no tablet para aluna sorridente">
-  </div>
-
-  <h2 class="reveal">Pare de perder alunos que já estão tendo resultado.</h2>
-  <a href="https://vortex-primus.vercel.app/" class="cta-button reveal">
-    🎁 Testar 7 dias grátis
-  </a>
-
-  <div class="objections reveal">
-    <div class="objection"><span class="check">✓</span> Sem cartão de crédito</div>
-    <div class="objection"><span class="check">✓</span> Cancele quando quiser</div>
-    <div class="objection"><span class="check">✓</span> Setup em 5 minutos</div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="logo">
-    <div class="logo-dot"></div>
-    VORTEX <span>PRIMUS</span>
-  </div>
-  <p>Gestão de avaliação física para personal trainers, nutricionistas e coaches de emagrecimento.</p>
-</footer>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const chart = document.querySelector('.cross-chart');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  reveals.forEach(el => observer.observe(el));
-  if (chart) observer.observe(chart);
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
