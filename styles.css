@@ -507,6 +507,19 @@ a { color: inherit; text-decoration: none; }
 
 .virada-media { position: relative; }
 
+.virada-hook {
+  grid-column: 1 / -1;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.25rem, 4vw, 1.9rem);
+  line-height: 1.45;
+  text-align: center;
+  margin: 4px 0 8px;
+}
+
+.virada-hook .muted { color: var(--text-tertiary); font-weight: 600; }
+.virada-hook .hl { color: var(--cyan); }
+
 .hud-frame {
   aspect-ratio: 16/9;
   border: 1px solid var(--border-glow);
