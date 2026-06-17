@@ -1107,3 +1107,408 @@ blockquote {
 
   .phone-mock { width: 200px; }
 }
+
+/* ============ 9. PREÇOS ============ */
+.section-precos { background: var(--bg); }
+
+.precos-header { margin-bottom: 48px; }
+
+.precos-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+
+.precos-note {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+}
+
+.pricing-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pricing-card:hover { transform: translateY(-4px); }
+
+.pricing-card-featured {
+  border-color: var(--cyan);
+  box-shadow: 0 0 40px -8px rgba(0,209,223,0.18);
+  transform: scale(1.03);
+}
+
+.pricing-card-featured:hover { transform: scale(1.03) translateY(-4px); }
+
+.badge-popular {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-brand);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan-name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.plan-currency {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.plan-amount {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+.plan-period {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.plan-students {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 0 0 28px;
+  flex: 1;
+}
+
+.plan-features li {
+  font-size: 0.88rem;
+  color: var(--white);
+  padding: 7px 0 7px 22px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  line-height: 1.45;
+}
+
+.plan-features li:last-child { border-bottom: none; }
+
+.plan-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.plan-features li.plan-feature-highlight::before {
+  content: "✦";
+  color: var(--purple);
+}
+
+.plan-cta {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.plan-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.plan-cta-primary {
+  background: var(--gradient-brand);
+  color: #000;
+}
+
+.plan-cta-secondary {
+  background: transparent;
+  border: 1px solid var(--border-glow);
+  color: var(--cyan);
+}
+
+@media (max-width: 640px) {
+  .pricing-card-featured { transform: scale(1); }
+  .pricing-card-featured:hover { transform: translateY(-4px); }
+}
+
+/* ============ 11. PROVA SOCIAL ============ */
+.section-prova-social { background: var(--bg-elevated); }
+
+.prova-header { margin-bottom: 48px; }
+
+.prova-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 420px;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 14px; right: 20px;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--purple);
+  opacity: 0.18;
+  line-height: 1;
+}
+
+.testimonial-card-placeholder {
+  opacity: 0.5;
+  border-style: dashed;
+}
+
+.testimonial-stars {
+  color: #FFD700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.testimonial-card-placeholder .testimonial-stars { opacity: 0.3; }
+
+.testimonial-text {
+  font-size: 0.97rem;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-card-placeholder .testimonial-text { color: var(--text-secondary); }
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.author-avatar-placeholder {
+  background: var(--bg-elevated);
+  color: var(--text-tertiary);
+}
+
+.author-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.testimonial-card-placeholder .author-name { color: var(--text-secondary); }
+
+.author-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* ============ 12. CREDIBILIDADE ============ */
+.section-credibilidade { background: var(--bg); }
+
+.credibilidade-inner {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+
+.credibilidade-foto-col {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.credibilidade-foto {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--cyan);
+  box-shadow: 0 0 32px -8px rgba(0,209,223,0.4);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-panel);
+}
+
+.credibilidade-foto img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.foto-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.foto-icon { font-size: 2.5rem; opacity: 0.35; }
+
+.fundador-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-glow);
+  border-radius: 999px;
+  padding: 5px 16px;
+}
+
+.credibilidade-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+
+.credibilidade-texto p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.credibilidade-texto p strong { color: var(--white); }
+
+.credibilidade-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.credential-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .credibilidade-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .credibilidade-tags { justify-content: center; }
+}
