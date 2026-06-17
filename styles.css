@@ -1594,3 +1594,21 @@ blockquote {
 
 /* scan-frame sem cantos HUD — para mídias secundárias */
 .scan-frame-plain .corner { display: none; }
+
+/* ============ EYEBROWS DE SEÇÃO — variação de cor ============ */
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-eyebrow-purple { color: var(--purple); }
+.section-eyebrow-green  { color: var(--green); }
+.section-eyebrow-cyan   { color: var(--cyan); }
+
+/* bridge em purple para contraste na agitação */
+.bridge-purple { color: var(--purple) !important; }
