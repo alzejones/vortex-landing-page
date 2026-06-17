@@ -949,6 +949,117 @@ blockquote {
   html { scroll-behavior: auto; }
 }
 
+/* ============ FAQ ============ */
+.section-faq { background: var(--bg-elevated); }
+
+.faq-header { margin-bottom: 48px; }
+
+.faq-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+
+.faq-list {
+  max-width: 780px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  line-height: 1.4;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover { color: var(--cyan); }
+
+.faq-question[aria-expanded="true"] { color: var(--cyan); }
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-glow);
+  position: relative;
+  transition: background 0.2s ease, transform 0.3s ease;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  background: var(--cyan);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.faq-icon::before {
+  width: 12px; height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+  width: 2px; height: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  background: rgba(0,209,223,0.1);
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer[hidden] {
+  display: block !important;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.faq-answer:not([hidden]) {
+  max-height: 300px;
+  visibility: visible;
+}
+
+.faq-answer p {
+  padding-bottom: 22px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 640px;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .virada-grid,

@@ -356,6 +356,83 @@
       </div>
     </section>
 
+    <!-- FAQ — Perguntas Frequentes -->
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <div class="faq-header">
+          <span class="faq-eyebrow">Dúvidas frequentes</span>
+          <h2 class="section-title">
+            Antes de testar,<br>
+            <span class="grad-text">tire suas dúvidas.</span>
+          </h2>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>Meus alunos vão conseguir usar?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>Sim. O app foi projetado pra quem não tem intimidade com tecnologia. A interface é limpa, os gráficos são visuais e o avatar faz o trabalho pesado — o aluno abre e entende na hora o que aconteceu com o corpo dele. Você não precisa explicar nada.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>Funciona em qualquer celular?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Funciona em qualquer smartphone com Android ou iOS atualizado. Também roda direto no navegador — computador, tablet, o que você preferir. Não tem instalação obrigatória.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>E se eu cancelar — perco os dados dos meus alunos?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Não. Todo o histórico de avaliações, medidas e progresso fica salvo. Se você voltar depois, está tudo lá. E durante o período de teste de 7 dias, nenhum dado é cobrado nem comprometido — você cancela sem perder nada.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>Precisa de internet o tempo todo?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>Precisa de conexão pra sincronizar avaliações e visualizar os gráficos em tempo real. Mas qualquer 4G resolve — não exige wi-fi, não trava na hora H da avaliação. Testado em condições reais de academia.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Tem suporte? Como funciona?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Suporte direto via WhatsApp com o time do Vortex. Sem ticket, sem fila, sem bot. Você fala com quem desenvolveu o produto — a mesma equipe que está na academia todo dia e entende o que você precisa na prática.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+              <span>Os dados dos meus alunos ficam protegidos?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq-6" hidden>
+              <p>Sim. Os dados ficam armazenados no Supabase com criptografia em repouso e em trânsito. Cada treinador acessa apenas os seus alunos. Nenhuma informação é compartilhada ou vendida — nunca.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- 10. CTA FINAL -->
     <section class="section section-cta" id="cta">
       <div class="cta-media">
@@ -387,6 +464,29 @@
     </div>
   </footer>
 
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const answerId = btn.getAttribute('aria-controls');
+        const answer = document.getElementById(answerId);
+
+        // Close all others
+        document.querySelectorAll('.faq-question').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            const otherAnswer = document.getElementById(other.getAttribute('aria-controls'));
+            otherAnswer.hidden = true;
+          }
+        });
+
+        // Toggle current
+        btn.setAttribute('aria-expanded', String(!expanded));
+        answer.hidden = expanded;
+      });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
