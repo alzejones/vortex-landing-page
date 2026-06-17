@@ -1612,3 +1612,48 @@ blockquote {
 
 /* bridge em purple para contraste na agitação */
 .bridge-purple { color: var(--purple) !important; }
+
+/* ============ HERO — trust badges zero-fricção ============ */
+.hero-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 14px;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.trust-icon {
+  color: var(--green);
+  font-size: 0.8rem;
+}
+
+/* ============ DIFERENCIAÇÃO DE CATEGORIA ============ */
+.category-differentiator {
+  margin-top: 40px;
+  padding: 24px 28px;
+  border-left: 3px solid var(--purple);
+  background: rgba(191,61,251,0.05);
+  border-radius: 0 12px 12px 0;
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 640px;
+}
+
+.category-differentiator strong {
+  color: var(--white);
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.6vw, 1.2rem);
+}
