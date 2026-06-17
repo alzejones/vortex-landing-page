@@ -1512,3 +1512,18 @@ blockquote {
   }
   .credibilidade-tags { justify-content: center; }
 }
+
+/* ============ CTA FINAL — urgência ============ */
+.cta-urgency-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--gradient-brand);
+  border-radius: 999px;
+  padding: 5px 18px;
+  margin-bottom: 20px;
+}
