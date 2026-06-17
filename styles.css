@@ -323,6 +323,25 @@ a { color: inherit; text-decoration: none; }
 .section-incluso,
 .section-primus { background: var(--bg-elevated); }
 
+/* Variação de background — quebra monotonia visual */
+.section-virada {
+  background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(191,61,251,0.06) 0%, transparent 70%), var(--bg);
+}
+
+.section-loop {
+  background: radial-gradient(ellipse 70% 50% at 30% 50%, rgba(61,220,132,0.05) 0%, transparent 65%), var(--bg);
+}
+
+.section-entrega {
+  background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0,209,223,0.05) 0%, transparent 65%), var(--bg);
+}
+
+.section-credibilidade {
+  background: radial-gradient(ellipse 60% 70% at 20% 50%, rgba(0,209,223,0.04) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 50% at 80% 80%, rgba(191,61,251,0.04) 0%, transparent 60%),
+              var(--bg);
+}
+
 /* ============ 2. AGITAÇÃO ============ */
 .video-frame {
   max-width: 880px;
@@ -1561,3 +1580,17 @@ blockquote {
   font-size: 1.4rem;
   font-weight: 300;
 }
+
+/* ============ SCROLL HOOKS — ganchos de curiosidade ============ */
+.section-hook {
+  margin-top: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--cyan);
+  opacity: 0.7;
+}
+
+/* scan-frame sem cantos HUD — para mídias secundárias */
+.scan-frame-plain .corner { display: none; }
