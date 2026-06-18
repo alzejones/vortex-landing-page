@@ -1953,16 +1953,16 @@ blockquote {
   overflow: hidden;
   border: 1px solid rgba(0,209,223,0.2);
   margin-bottom: 20px;
-  /* Imagem da solução ocupa largura total e é mais vibrante */
   filter: saturate(1.1) brightness(1.05);
+  /* Sem restrição de altura — imagem completa visível */
 }
 
 .tr-solution-img img {
   width: 100%;
   display: block;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: top center;
+  object-position: center center;
 }
 
 .tr-solution-list {
@@ -2022,11 +2022,8 @@ blockquote {
     max-width: 680px;
   }
 
-  .tr-solution-img {
-    aspect-ratio: 16/7;
-  }
-
   .tr-solution-img img {
-    aspect-ratio: 16/7;
+    aspect-ratio: 4/3;
+    object-position: center center;
   }
 }
