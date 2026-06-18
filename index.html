@@ -211,13 +211,10 @@
       <div class="container virada-grid">
         <div class="virada-media">
           <div class="hud-frame scan-frame">
-            <div class="media-placeholder">
-              <div class="mp-inner">
-                <span class="mp-type">VÍDEO (screen recording do app)</span>
-                <span class="mp-label">assets/avatar-evolution.webm</span>
-                <span class="mp-desc">Gravação de tela do app Vortex mostrando o avatar corporal mudando entre duas avaliações — silhueta com mais gordura transformando para silhueta mais definida.</span>
-              </div>
-            </div>
+            <video autoplay muted loop playsinline poster="assets/avatar-screen.jpg">
+              <source src="assets/avatar-evolution.webm" type="video/webm">
+              <source src="assets/avatar-evolution.mp4" type="video/mp4">
+            </video>
             <div class="corner corner-tl" aria-hidden="true"></div>
             <div class="corner corner-tr" aria-hidden="true"></div>
             <div class="corner corner-bl" aria-hidden="true"></div>
@@ -226,13 +223,7 @@
           <div class="virada-footer">
             <p class="virada-hook">A diferença entre <span class="muted">"eu acho que melhorei"</span> e <span class="hl">"eu VEJO que melhorei"</span>.</p>
             <div class="proof-badge">
-              <div class="media-placeholder media-placeholder-portrait">
-                <div class="mp-inner">
-                  <span class="mp-type">SCREENSHOT do app</span>
-                  <span class="mp-label">assets/avatar-screen.jpg</span>
-                  <span class="mp-desc">Print da tela do Vortex: avatar corporal + gráfico mostrando gordura↓ e músculo↑. Dados reais de um aluno.</span>
-                </div>
-              </div>
+              <img src="assets/avatar-screen.jpg" alt="Tela real do Vortex Primus: gráfico mostrando % Gordura caindo e % Músculo subindo ao longo do tempo" loading="lazy">
               <span class="proof-label">Direto do app</span>
             </div>
           </div>
