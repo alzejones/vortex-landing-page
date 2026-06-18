@@ -2027,3 +2027,65 @@ blockquote {
     object-position: center center;
   }
 }
+
+/* ============ ENTREGA — VISÃO DO ECOSSISTEMA (nível 2) ============ */
+.entrega-vision {
+  position: relative;
+  margin-top: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(191,61,251,0.25);
+  box-shadow: 0 0 40px -12px rgba(191,61,251,0.2);
+  /* Levemente menor que o phone-mock para hierarquia clara */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entrega-vision img {
+  width: 100%;
+  display: block;
+  /* Corta topo e base — foca nas telas do app, remove espaço em branco */
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center 20%;
+  /* Leve dessaturação — subordinada ao phone-mock que é dado real */
+  filter: saturate(0.85) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.entrega-vision:hover img {
+  filter: saturate(1) brightness(1);
+}
+
+.entrega-vision-label {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.entrega-vision-icon { font-size: 0.8rem; }
+
+/* Mobile — vision aparece abaixo do phone-mock em coluna única */
+@media (max-width: 900px) {
+  .entrega-vision {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .entrega-vision img {
+    aspect-ratio: 4/5;
+    object-position: center 15%;
+  }
+}
