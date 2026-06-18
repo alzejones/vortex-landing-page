@@ -2089,3 +2089,18 @@ blockquote {
     object-position: center 15%;
   }
 }
+
+/* ============ ENTREGA VISION WRAP — fora do grid, largura controlada ============ */
+.entrega-vision-wrap {
+  margin-top: 48px;
+}
+
+.entrega-vision-wrap .entrega-vision {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.entrega-vision-wrap .entrega-vision img {
+  aspect-ratio: 9/12;
+  object-position: center 10%;
+}
