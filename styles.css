@@ -2417,3 +2417,9 @@ blockquote {
 }
 
 .author-instagram:hover { opacity: 1; }
+
+/* Instagram na seção Credibilidade */
+.credibilidade-instagram {
+  color: var(--cyan) !important;
+  margin-top: 6px;
+}
