@@ -1089,10 +1089,17 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
+  /* Reduz gap no mobile — elimina espaço vazio entre elementos empilhados */
+  .virada-grid { gap: 20px; margin-top: 16px; }
+  .entrega-grid { gap: 20px; }
+  .incluso-grid { gap: 20px; }
+
+  /* Virada: texto logo após o vídeo, sem espaço perdido */
+  .virada-footer { margin-top: 12px; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .proof-badge { transform: none; width: 100%; max-width: 200px; }
+
   .data-badge { left: 12px; top: 12px; }
   .depoimentos-media { margin-bottom: 8px; }
-
-  .proof-badge { width: 110px; }
 
   .incluso-media { order: -1; margin-bottom: 8px; }
 
@@ -2184,18 +2191,19 @@ blockquote {
   z-index: 1;
 }
 
-/* Cards do loop ficam com fundo semi-transparente sobre a imagem */
+/* Cards do loop — glass morphism, deixa imagem respirar */
 .loop-content .loop-positive {
-  background: rgba(13,13,13,0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .loop-content .loop-negative {
-  background: rgba(255,92,92,0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-color: rgba(255,92,92,0.3);
+  background: rgba(255,92,92,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255,92,92,0.25);
 }
 
 /* hook dentro do loop — sem seta, integrado ao topo da seção */
