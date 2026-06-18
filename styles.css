@@ -2148,3 +2148,54 @@ blockquote {
   align-items: center;
   gap: 10px;
 }
+
+/* ============ LOOP — imagem de fundo com contraste ============ */
+.section-loop {
+  position: relative;
+  overflow: hidden;
+  /* override background radial — imagem vai cobrir */
+  background: var(--bg) !important;
+}
+
+.loop-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.loop-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  /* Dessatura levemente para o texto respirar */
+  filter: saturate(0.7) brightness(0.45);
+}
+
+.loop-bg-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradiente que escurece bordas e centro lateral, preserva conteúdo legível */
+  background:
+    linear-gradient(to right, rgba(13,13,13,0.85) 0%, rgba(13,13,13,0.3) 30%, rgba(13,13,13,0.3) 70%, rgba(13,13,13,0.85) 100%),
+    linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.1) 20%, rgba(13,13,13,0.1) 80%, rgba(13,13,13,0.7) 100%);
+}
+
+.loop-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards do loop ficam com fundo semi-transparente sobre a imagem */
+.loop-content .loop-positive {
+  background: rgba(13,13,13,0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.loop-content .loop-negative {
+  background: rgba(255,92,92,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(255,92,92,0.3);
+}
