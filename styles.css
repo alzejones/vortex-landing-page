@@ -2221,8 +2221,8 @@ blockquote {
 
   /* Entrega — fundo glass no bloco de texto */
   .entrega-text {
-    background: rgba(255,255,255,0.13);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.13);
     border-radius: 16px;
     padding: 24px 20px;
     backdrop-filter: blur(8px);
@@ -2231,11 +2231,110 @@ blockquote {
 
   /* Virada — fundo glass no bloco de texto */
   .virada-text {
-    background: rgba(255,255,255,0.13);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.13);
     border-radius: 16px;
     padding: 20px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
+}
+/* ============ LOOP — MOBILE REESTRUTURADO (4 elementos empilhados) ============ */
+@media (max-width: 900px) {
+
+  /* Remove imagem de fundo no mobile — cada elemento ocupa sua faixa */
+  .section-loop {
+    background: var(--bg) !important;
+    padding: 0 !important;
+  }
+
+  .loop-bg { display: none; }
+
+  .loop-content { padding: 0; }
+
+  /* ELEMENTO 1 — Imagem topo: personal frustrado com planilha */
+  .section-loop::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 220px;
+    background: url('assets/agitation.jpg') center 8% / cover no-repeat;
+    filter: saturate(0.75) brightness(0.6);
+    position: relative;
+  }
+
+  /* TÍTULO — sobre faixa escura, sem imagem atrás */
+  .loop-content > .loop-hook,
+  .loop-content > .section-eyebrow,
+  .loop-content > .section-title {
+    padding: 0 24px;
+  }
+
+  .loop-content > .section-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* LOOP GRID — vertical, sem fundo opaco cobrindo imagem */
+  .loop-grid {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+
+  /* CARD POSITIVO — fundo escuro sólido, sem imagem atrás */
+  .loop-content .loop-positive {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    background: rgba(13,13,13,0.96) !important;
+    backdrop-filter: none !important;
+    padding: 28px 24px;
+  }
+
+  /* FAIXA DA IMAGEM INFERIOR — aluna e treinador sorrindo */
+  .loop-divider {
+    width: 100%;
+    height: 200px;
+    background: url('assets/agitation.jpg') center 75% / cover no-repeat;
+    filter: saturate(0.9) brightness(0.7);
+    flex: none;
+    position: relative;
+  }
+
+  /* Remove o pseudo-elemento da linha e seta */
+  .loop-divider::after { display: none; }
+  .loop-divider-line { display: none; }
+
+  /* Linha divisória diagonal cyan sobre a faixa */
+  .loop-divider::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(13,13,13,0.7) 0%,
+      rgba(0,209,223,0.08) 40%,
+      rgba(13,13,13,0.5) 100%
+    );
+  }
+
+  /* CARD NEGATIVO — fundo vermelho sólido */
+  .loop-content .loop-negative {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    flex: none;
+    background: rgba(30,8,8,0.97) !important;
+    backdrop-filter: none !important;
+    padding: 28px 24px;
+  }
+
+  /* Padding final da seção */
+  .loop-content {
+    padding-bottom: 0;
+  }
+
+  /* Eyebrow e título ficam acima do grid, com padding lateral */
+  .loop-content > .loop-hook { padding-top: 32px; }
 }
