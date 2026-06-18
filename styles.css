@@ -1839,3 +1839,194 @@ blockquote {
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+/* ============ SEÇÃO TRADUÇÃO — REESTRUTURADA GESTALT MOBILE-FIRST ============ */
+
+/* Remove estilos legados que conflitam */
+.translate-grid, .translate-col, .translate-arrow,
+.col-no, .col-yes, .col-label, .col-no-media,
+.col-yes-content, .col-yes-media, .col-media { display: none !important; }
+
+/* CONTAINER GERAL */
+.tr-block {
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+/* ── BLOCO PROBLEMA — contido, subordinado ── */
+.tr-block-problem {
+  background: rgba(255,92,92,0.04);
+  border: 1px solid rgba(255,92,92,0.15);
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+
+.tr-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tr-label-problem { color: var(--red); }
+.tr-label-solution { color: var(--cyan); }
+
+.tr-problem-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tr-problem-img {
+  flex: 0 0 42%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,92,92,0.2);
+  /* Filtro dessaturado reforça a dor */
+  filter: saturate(0.5) brightness(0.85);
+}
+
+.tr-problem-img img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.tr-problem-list {
+  list-style: none;
+  flex: 1;
+}
+
+.tr-problem-list li {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.tr-problem-list li:last-child { border-bottom: none; }
+
+/* ── TRANSIÇÃO ── */
+.tr-transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 0;
+  position: relative;
+}
+
+.tr-transition-line {
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(255,92,92,0.4), rgba(0,209,223,0.6));
+}
+
+.tr-transition-arrow { flex-shrink: 0; }
+
+.tr-transition-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-top: 4px;
+}
+
+/* ── BLOCO SOLUÇÃO — dominante, vibrante, maior ── */
+.tr-block-solution {
+  background: rgba(0,209,223,0.04);
+  border: 1px solid rgba(0,209,223,0.25);
+  box-shadow: 0 0 40px -12px rgba(0,209,223,0.15);
+}
+
+.tr-solution-img {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,209,223,0.2);
+  margin-bottom: 20px;
+  /* Imagem da solução ocupa largura total e é mais vibrante */
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.tr-solution-img img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.tr-solution-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tr-solution-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.tr-solution-list li:last-child { border-bottom: none; }
+
+.tr-solution-list li strong {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.tr-trend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+}
+
+.tr-trend-down { background: rgba(255,92,92,0.1); }
+.tr-trend-up   { background: rgba(61,220,132,0.1); }
+.tr-trend-body { background: rgba(0,209,223,0.1); color: var(--cyan); font-size: 0.9rem; }
+.tr-trend-measure { background: transparent; overflow: hidden; }
+
+.tr-measure-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ── DESKTOP — mantém equilíbrio mas solução maior ── */
+@media (min-width: 900px) {
+  .tr-block-problem .tr-problem-inner { flex-direction: row; }
+
+  /* No desktop, lado a lado mas solução 60% do espaço */
+  .section-translate .container > .tr-block {
+    max-width: 680px;
+  }
+
+  .tr-solution-img {
+    aspect-ratio: 16/7;
+  }
+
+  .tr-solution-img img {
+    aspect-ratio: 16/7;
+  }
+}

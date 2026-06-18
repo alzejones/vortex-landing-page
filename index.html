@@ -117,55 +117,85 @@
     <!-- 3. TRADUÇÃO — PARE DE ENTREGAR NÚMEROS -->
     <section class="section section-translate" id="traducao">
       <div class="container">
+
         <h2 class="section-title">
           Pare de entregar números.<br>
           <span class="grad-text">Comece a entregar evolução.</span>
         </h2>
         <p class="section-intro">O aluno comum não entende protocolos, percentuais, fórmulas ou dobras cutâneas.</p>
 
-        <div class="translate-grid">
-          <div class="translate-col col-no">
-            <span class="col-label">O que ele não entende</span>
-            <ul>
+        <!-- BLOCO PROBLEMA — contido, subordinado -->
+        <div class="tr-block tr-block-problem">
+          <span class="tr-label tr-label-problem">❌ O que ele não entende</span>
+          <div class="tr-problem-inner">
+            <div class="tr-problem-img">
+              <img src="assets/confusao-planilha.jpg" alt="Aluna confusa olhando planilha de avaliação física com o personal trainer" loading="lazy">
+            </div>
+            <ul class="tr-problem-list">
               <li>Protocolos</li>
               <li>Percentuais</li>
               <li>Fórmulas</li>
               <li>Dobras cutâneas</li>
             </ul>
-            <div class="col-media col-no-media">
-              <img src="assets/confusao-planilha.jpg" alt="Aluna confusa olhando planilha de avaliação física com o personal trainer" loading="lazy">
-            </div>
-          </div>
-          <div class="translate-arrow" aria-hidden="true">
-            <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
-              <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="translate-col col-yes">
-            <span class="col-label">O que ele entende na hora</span>
-            <div class="col-yes-content">
-              <ul>
-                <li><span class="trend trend-down" aria-hidden="true"><svg viewBox="0 0 28 16"><path d="M1 2 L10 6 L19 9 L27 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Gordura diminuindo</li>
-                <li><span class="trend trend-up" aria-hidden="true"><svg viewBox="0 0 28 16"><path d="M1 14 L10 10 L19 7 L27 2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Massa muscular aumentando</li>
-                <li><span class="trend trend-body" aria-hidden="true">●</span> Corpo transformando</li>
-              </ul>
-              <div class="col-media col-yes-media">
-                <img src="assets/resultado-tablet.jpg" alt="Personal trainer e aluna sorrindo ao ver o gráfico de gordura e músculo no tablet" loading="lazy">
-              </div>
-            </div>
           </div>
         </div>
 
-        <p class="translate-closing">
-          É isso que gera motivação.<br>
-          É isso que aumenta retenção.<br>
-          É isso que faz o aluno continuar.
-        </p>
+        <!-- SETA DE TRANSIÇÃO -->
+        <div class="tr-transition" aria-hidden="true">
+          <div class="tr-transition-line"></div>
+          <svg class="tr-transition-arrow" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="13" stroke="url(#arrowGrad)" stroke-width="1.5"/>
+            <path d="M14 8v12M14 20l-5-5M14 20l5-5" stroke="url(#arrowGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00D1DF"/>
+                <stop offset="1" stop-color="#BF3DFB"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="tr-transition-label">Com o Vortex</span>
+        </div>
+
+        <!-- BLOCO SOLUÇÃO — dominante, maior, vibrante -->
+        <div class="tr-block tr-block-solution">
+          <span class="tr-label tr-label-solution">✓ O que ele entende na hora</span>
+
+          <div class="tr-solution-img">
+            <img src="assets/resultado-tablet.jpg" alt="Personal trainer e aluna sorrindo ao ver o gráfico de gordura e músculo no tablet" loading="lazy">
+          </div>
+
+          <ul class="tr-solution-list">
+            <li>
+              <span class="tr-trend tr-trend-down" aria-hidden="true">
+                <svg viewBox="0 0 28 16" width="28" height="16"><path d="M1 2 L10 6 L19 9 L27 14" fill="none" stroke="#FF5C5C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Gordura <strong>diminuindo</strong></span>
+            </li>
+            <li>
+              <span class="tr-trend tr-trend-up" aria-hidden="true">
+                <svg viewBox="0 0 28 16" width="28" height="16"><path d="M1 14 L10 10 L19 7 L27 2" fill="none" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Massa muscular <strong>aumentando</strong></span>
+            </li>
+            <li>
+              <span class="tr-trend tr-trend-measure" aria-hidden="true">
+                <img src="assets/medida-fita.jpg" alt="" class="tr-measure-img">
+              </span>
+              <span>Redução de <strong>medidas corporais</strong></span>
+            </li>
+            <li>
+              <span class="tr-trend tr-trend-body" aria-hidden="true">●</span>
+              <span>Corpo <strong>transformando</strong></span>
+            </li>
+          </ul>
+        </div>
+
         <p class="category-differentiator">
           Qualquer ferramenta registra a avaliação.<br>
           <strong>O Vortex faz o aluno querer voltar pra fazer a próxima.</strong>
         </p>
         <p class="section-hook">E tem uma tela no app que faz exatamente isso — em segundos. ↓</p>
+
       </div>
     </section>
 
