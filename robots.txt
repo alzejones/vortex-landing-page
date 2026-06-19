@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vortex-landing-ten.vercel.app/sitemap.xml
