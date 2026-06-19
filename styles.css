@@ -2448,3 +2448,19 @@ blockquote {
   padding: 1px 7px;
   white-space: nowrap;
 }
+
+/* ============ STEPS — conectores corrigidos (sem embolar com números) ============ */
+.step-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* centraliza horizontalmente com o número */
+  padding-left: 27px;       /* alinha com o centro do círculo (56px/2 = 28px - 1px) */
+  margin: -4px 0;
+  color: var(--border-glow);
+}
+
+/* Badge Elisângela — verde para destacar o resultado positivo */
+.eli-photo-badge-green {
+  color: var(--green) !important;
+  text-shadow: 0 0 12px rgba(61,220,132,0.7), 0 0 24px rgba(61,220,132,0.4) !important;
+}
