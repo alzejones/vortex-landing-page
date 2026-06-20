@@ -2614,3 +2614,14 @@ blockquote {
   color: var(--text-tertiary);
   font-size: 0.72rem;
 }
+
+/* ============ CTA — price lock notice ============ */
+.cta-price-lock {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  letter-spacing: 0.02em;
+  margin-top: 12px;
+  opacity: 0.85;
+  max-width: 440px;
+}
